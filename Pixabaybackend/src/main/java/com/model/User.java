@@ -1,14 +1,6 @@
 package com.model;
 import java.io.Serializable;
-import java.util.*;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-//import javax.persistence.*;
-import javax.validation.*;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -16,10 +8,16 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
+@SuppressWarnings("deprecation")
 @Entity					
 @Table(name="User")		
 public class User implements Serializable 		
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id											//it create email column as primary key
 	@Email(message="Enter valid Email")			//@Email,@NotEmpty=hibernate validation
 	@NotEmpty(message="Enter the Email")

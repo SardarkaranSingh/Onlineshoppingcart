@@ -9,8 +9,7 @@ import com.dao.UserDao;
 
 import com.model.User;
 
-@SuppressWarnings("deprecation")
-	@Repository("UserDaoImpl")
+@Repository("UserDaoImpl")
 	public class UserDaoImpl implements UserDao
 	{
 		@Autowired						

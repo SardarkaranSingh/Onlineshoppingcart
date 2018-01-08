@@ -14,7 +14,13 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.daoImpl.CategoryDaoImpl;
+import com.daoImpl.ProductDaoImpl;
+import com.daoImpl.SupplierDaoImpl;
 import com.daoImpl.UserDaoImpl;
+import com.model.Category;
+import com.model.Product;
+import com.model.Supplier;
 import com.model.User;
 
 
@@ -56,6 +62,10 @@ public SessionFactory getSessionFactory(DataSource dataSource) {
 LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);	//spring-orm
 sessionBuilder.addProperties(getHibernateProperties());
 sessionBuilder.addAnnotatedClass(User.class); 
+sessionBuilder.addAnnotatedClass(Category.class); 
+sessionBuilder.addAnnotatedClass(Product.class); 
+sessionBuilder.addAnnotatedClass(Supplier.class); 
+
 
 return sessionBuilder.buildSessionFactory();
 }
@@ -66,6 +76,30 @@ public UserDaoImpl getUserDAO(SessionFactory sessionFactory)
 {
 return new UserDaoImpl(sessionFactory);
 }
+
+
+@Autowired
+@Bean(name="CategoryDaoImpl")
+public CategoryDaoImpl getCategoryDAO(SessionFactory sessionFactory)
+{
+return new CategoryDaoImpl(sessionFactory);
+}
+
+@Autowired
+@Bean(name="ProductDaoImpl")
+public ProductDaoImpl getProductDAO(SessionFactory sessionFactory)
+{
+return new ProductDaoImpl(sessionFactory);
+}
+
+@Autowired
+@Bean(name="SupplierDaoImpl")
+public SupplierDaoImpl getSupplierDAO(SessionFactory sessionFactory)
+{
+return new SupplierDaoImpl(sessionFactory);
+}
+
+
 
 @Autowired
 @Bean(name = "transactionManager")			//spring-orm

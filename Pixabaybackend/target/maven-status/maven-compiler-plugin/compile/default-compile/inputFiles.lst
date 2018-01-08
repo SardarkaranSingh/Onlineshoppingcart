@@ -1,5 +1,14 @@
-E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\dao\UserDao.java
 E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\model\User.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\dao\CategoryDao.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\daoImpl\UserDaoImpl.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\dao\SupplierDao.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\dao\UserDao.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\daoImpl\SupplierDaoImpl.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\dao\ProductDao.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\daoImpl\ProductDaoImpl.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\model\Category.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\model\Product.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\model\Supplier.java
 E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\Pixabaybackend\App.java
 E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\config\hibernateConfig.java
-E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\daoImpl\UserDaoImpl.java
+E:\OnlineShopping\Onlineshoppingcart\Pixabaybackend\src\main\java\com\daoImpl\CategoryDaoImpl.java

@@ -47,6 +47,15 @@
    						<ul class="nav navbar-nav navbar-right">
       							<li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
       							<li><a href="${pageContext.request.contextPath}/goToLogin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    							
+    							
+    							
+    							 <li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li>
+    						
+    			<li><a href="${pageContext.request.contextPath}/admin/adding">Admin</a></li>
+         		<li><a href="${pageContext.request.contextPath}/admin/productList">Products</a></li>
+         		<li><a href="${pageContext.request.contextPath}/admin/categoryList">Category</a></li>
+         		<li><a href="${pageContext.request.contextPath}/admin/supplierList">Supplier</a></li>
     						
 
     					</ul>
