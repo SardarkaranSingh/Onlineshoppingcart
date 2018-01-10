@@ -77,6 +77,10 @@ public class Product  implements Serializable
 		this.price = price;
 	}
 
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	public int getStock() {
 		return stock;
 	}

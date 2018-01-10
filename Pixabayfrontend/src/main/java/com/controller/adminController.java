@@ -103,7 +103,7 @@ public class adminController
 		Product prod=new Product();
 		prod.setName(request.getParameter("pName"));
 		prod.setPrice(Float.parseFloat(request.getParameter("pPrice")));
-	//	prod.setDescription(request.getParameter("pDescription"));
+		prod.setDescription(request.getParameter("pDescription"));
 		prod.setStock(Integer.parseInt(request.getParameter("pStock")));
 		
 		//for category
@@ -183,7 +183,7 @@ public class adminController
 		prod1.setId(Integer.parseInt(pid));
 		prod1.setName(pname);
 		prod1.setPrice(Float.parseFloat(pprice));
-	///	prod1.setDescription(pdesc);
+		prod1.setDescription(pdesc);
 		prod1.setStock(Integer.parseInt(pstock));
 		
 		//for category
@@ -197,7 +197,7 @@ public class adminController
 		String filename=file.getOriginalFilename();
 		prod1.setImgname(filename);
 		productDaoImpl.insertProduct(prod1);
-		System.out.println("file path file "+filepath+" "+filename);
+		System.out.println("file path file "+filepath+""+filename);
 		try
 		{
 			byte imagebyte[]=file.getBytes();

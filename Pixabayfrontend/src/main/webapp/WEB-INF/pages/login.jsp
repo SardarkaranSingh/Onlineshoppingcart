@@ -34,7 +34,7 @@ background-image: url("resources/images/wall2.jpg");
 <%@include file="header.jsp" %>
 <h2 style="text-align: center;"><b>Please Login</b></h2>
 <div class="login-page">
-<form action="perform_login" class="form-signin" method="post">
+<form action="${pageContext.request.contextPath}/perform_login" class="form-signin" method="post">
   <div class="imgcontainer">
     <img src="resources/images/userIcon.png" alt="Avatar" class="avatar">
   </div>

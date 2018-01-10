@@ -14,11 +14,15 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.daoImpl.CartDaoImpl;
 import com.daoImpl.CategoryDaoImpl;
+import com.daoImpl.OrderDaoImpl;
 import com.daoImpl.ProductDaoImpl;
 import com.daoImpl.SupplierDaoImpl;
 import com.daoImpl.UserDaoImpl;
+import com.model.Cart;
 import com.model.Category;
+import com.model.Order;
 import com.model.Product;
 import com.model.Supplier;
 import com.model.User;
@@ -27,7 +31,7 @@ import com.model.User;
 @Configuration				//Used to configure hibernate properties
 @ComponentScan("com.*")			 
 								
-@EnableTransactionManagement	//enabling Spring’s annotation-driven transaction management capability
+@EnableTransactionManagement	//enabling Springâ€™s annotation-driven transaction management capability
 public class hibernateConfig{
 
 @Autowired						
@@ -65,8 +69,8 @@ sessionBuilder.addAnnotatedClass(User.class);
 sessionBuilder.addAnnotatedClass(Category.class); 
 sessionBuilder.addAnnotatedClass(Product.class); 
 sessionBuilder.addAnnotatedClass(Supplier.class); 
-
-
+sessionBuilder.addAnnotatedClass(Cart.class); 
+sessionBuilder.addAnnotatedClass(Order.class); 
 return sessionBuilder.buildSessionFactory();
 }
 
@@ -76,7 +80,6 @@ public UserDaoImpl getUserDAO(SessionFactory sessionFactory)
 {
 return new UserDaoImpl(sessionFactory);
 }
-
 
 @Autowired
 @Bean(name="CategoryDaoImpl")
@@ -97,6 +100,20 @@ return new ProductDaoImpl(sessionFactory);
 public SupplierDaoImpl getSupplierDAO(SessionFactory sessionFactory)
 {
 return new SupplierDaoImpl(sessionFactory);
+}
+
+@Autowired
+@Bean(name="CartDaoImpl")
+public CartDaoImpl getCartDAO(SessionFactory sessionFactory)
+{
+return new CartDaoImpl(sessionFactory);
+}
+
+@Autowired
+@Bean(name="OrderDaoImpl")
+public OrderDaoImpl getOrderDAO(SessionFactory sessionFactory)
+{
+return new OrderDaoImpl(sessionFactory);
 }
 
 
