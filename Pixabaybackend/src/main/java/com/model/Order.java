@@ -50,8 +50,8 @@ public class Order
 	public Double getTotal() {
 		return total;
 	}
-	public void setTotal(Double total) {
-		this.total = total;
+	public void setTotal(int total2) {
+		this.total = total2;
 	}
 	
 

@@ -7,14 +7,11 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.bytebuddy.asm.Advice.Return;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,16 +23,17 @@ import org.springframework.web.servlet.ModelAndView;
 import com.daoImpl.CategoryDaoImpl;
 import com.daoImpl.ProductDaoImpl;
 import com.daoImpl.SupplierDaoImpl;
-import com.daoImpl.UserDaoImpl;
 import com.model.Category;
 import com.model.Product;
 import com.model.Supplier;
-import com.model.User;
+
 
 @Controller
 @RequestMapping("/admin")			
 public class adminController 
 {
+	
+
 	//==================go to adding.jsp=================================
 	@RequestMapping("/adding")
 	public String addPage()
@@ -197,7 +195,7 @@ public class adminController
 		String filename=file.getOriginalFilename();
 		prod1.setImgname(filename);
 		productDaoImpl.insertProduct(prod1);
-		System.out.println("file path file "+filepath+""+filename);
+		System.out.println("file path file "+filepath+" "+filename);
 		try
 		{
 			byte imagebyte[]=file.getBytes();
